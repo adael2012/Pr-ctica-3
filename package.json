@@ -1,0 +1,36 @@
+{
+  "name": "plantilla-devops-itla",
+  "version": "1.0.0",
+  "description": "Plantilla base para la Práctica 3 y el Proyecto Final de Electiva 1: Introducción a DevOps (ITLA)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --coverage",
+    "lint": "node --check src/app.js && node --check src/server.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/app.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  }
+}
